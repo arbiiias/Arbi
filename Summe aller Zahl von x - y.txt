@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main
+{
+    Einleser einleser = new Einleser();
+    // declare attributes
+    static Scanner scanner;
+
+    /**
+     * constructor: initialize attributes
+     */
+    public Main() {
+        scanner = new Scanner(System.in);
+    }
+
+    /**
+     * starts the execution
+     *
+     * @param args
+     *            command line arguments
+     */
+    public static void main(String[] args) {
+        Main program = new Main();
+        program.run();
+        scanner.close();
+    }
+
+    /**
+     * description
+     */
+    private void run() {
+        int summe =    0;
+        int min   =    1;
+        int max   = 2011;
+
+        summe = (max - min + 1) * (max + min) / 2;
+        System.out.println("Die summe aller Zahlen von der Zahl " + min + " und " + max + " beträgt " + summe);
+    }
+}
+
